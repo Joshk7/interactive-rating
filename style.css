@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    overflow-wrap: break-word;
+}
+
+:root {
+    /* colors */
+    --dark-blue: #262e38;
+    --light-grey: #969fad;
+    --orange: #fc7614;
+    --pure-white: #ffffff;
+    --very-dark-blue: #131518;
+    --black-gradient: radial-gradient(circle, #232a34 0%, #181e27 100%);
+
+    /* typography */
+    --heading-large: bold 1.75rem/1 "Overpass";
+    --rating: bold 1rem/1.5 "Overpass";
+    --heading-medium: bold 0.9375rem/1 "Overpass";
+    --body: bold 0.9375rem/1.6 "Overpass";
+}
+
+body {
+    font: var(--body);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
