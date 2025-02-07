@@ -3,6 +3,8 @@ const ratingForm = rating.querySelector("form");
 const radioButtons = ratingForm.querySelectorAll("input[type=radio]");
 const selection = document.getElementById("selection");
 
+let hasError = false;
+
 const populateRating = (rating) => {
     selection.textContent = rating;
 }
@@ -10,6 +12,16 @@ const populateRating = (rating) => {
 const displayMessage = () => {
     rating.classList.add("invisible");
     thanks.classList.remove("invisible");
+}
+
+const displayError = () => {
+    if (!hasError) {
+        const error = document.createElement("p");
+        error.classList.add("error");
+        error.textContent = "Please choose a rating";
+        ratingForm.appendChild(error);
+        hasError = true;
+    }
 }
 
 const handleRating = (e) => {
@@ -23,11 +35,12 @@ const handleFormSubmit = (e) => {
     e.preventDefault();
     const selectedRating = [...radioButtons].filter(rating => rating.checked);
     if (selectedRating.length === 0) {
-        return;
+        displayError();
+    } else {
+        const value = selectedRating[0].value;
+        populateRating(value);
+        displayMessage();
     }
-    const value = selectedRating[0].value;
-    populateRating(value);
-    displayMessage();
 }
 
 ratingForm.addEventListener("submit", handleFormSubmit)

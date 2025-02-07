@@ -171,9 +171,18 @@ label {
     cursor: pointer;
 }
 
-.submit:hover {
+.submit:hover,
+.submit:focus {
     background: var(--pure-white);
     color: var(--dark-blue);
+    outline: none;
+}
+
+.error {
+    margin-block: 1rem;
+    color: var(--orange);
+    font: var(--body);
+    text-align: center;
 }
 
 .thanks {
