@@ -233,6 +233,14 @@ label {
 }
 
 @media screen and (min-width: 375px) {
+    section {
+        border-radius: 1.875rem;
+    }
+
+    .rating {
+        padding: 2rem;
+    }
+
     .wrapper {
         width: 3rem;
         height: 3rem;
@@ -267,6 +275,10 @@ label {
     .submit {
         font: var(--heading-medium);
         line-height: normal;
+    }
+
+    .thanks {
+        padding: 2.8125rem 2.25rem;
     }
 
     .illustration {
