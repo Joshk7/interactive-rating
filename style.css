@@ -54,7 +54,7 @@ span {
     --heading-large: bold 1.75rem/1 "Overpass";
     --rating: bold 1rem/1.5 "Overpass";
     --heading-medium: bold 0.9375rem/1 "Overpass";
-    --body: bold 0.9375rem/1.6 "Overpass";
+    --body: normal 0.9375rem/1.6 "Overpass";
 }
 
 html {
@@ -78,7 +78,7 @@ main {
 
 section {
     margin-block: auto;
-    max-width: 20.4375rem;
+    max-width: 25.75rem;
     background: var(--black-gradient);
     border-radius: 0.9375rem;
 }
@@ -221,4 +221,57 @@ label {
 
 .invisible {
     display: none;
+}
+
+@media screen and (min-width: 375px) {
+    .wrapper {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .icon {
+        width: 1.046875rem;
+        height: 1rem;
+    }
+
+    .rating__title {
+        margin-block-start: 1.875rem;
+        font: var(--heading-large);
+    }
+
+    .rating__description {
+        font: var(--body);
+    }
+
+    .list {
+        margin-block-start: 1.5rem;
+        margin-block-end: 2rem;
+    }
+
+    label {
+        width: 3.1875rem;
+        height: 3.1875rem;
+        font: var(--rating);
+    }
+
+    .submit {
+        font: var(--heading-medium);
+    }
+
+    .illustration {
+        width: 10.125rem;
+        height: 6.75rem;
+    }
+
+    .selection {
+        margin-block: 2rem;
+    }
+
+    .thanks__title {
+        font: var(--heading-large);
+    }
+
+    .thanks__description {
+        font: var(--body);
+    }
 }

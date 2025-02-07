@@ -12,6 +12,13 @@ const displayMessage = () => {
     thanks.classList.remove("invisible");
 }
 
+const handleRating = (e) => {
+    e.preventDefault();
+    if (e.key === "Enter") {
+        e.target.click();
+    }
+}
+
 const handleFormSubmit = (e) => {
     e.preventDefault();
     const selectedRating = [...radioButtons].filter(rating => rating.checked);
@@ -24,3 +31,7 @@ const handleFormSubmit = (e) => {
 }
 
 ratingForm.addEventListener("submit", handleFormSubmit)
+
+radioButtons.forEach((button) => {
+    button.addEventListener("keypress", handleRating);
+})
