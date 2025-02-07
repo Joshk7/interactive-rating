@@ -246,6 +246,7 @@ label {
     .rating__title {
         margin-block-start: 1.875rem;
         font: var(--heading-large);
+        line-height: normal;
     }
 
     .rating__description {
@@ -265,6 +266,7 @@ label {
 
     .submit {
         font: var(--heading-medium);
+        line-height: normal;
     }
 
     .illustration {
